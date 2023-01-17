@@ -23,7 +23,7 @@ Windows users will need to download Git in order to use the Git Bash terminal.
 
 [Git](https://git-scm.com/download/win)
 
-Run the installer with default settings, then go back to VS Code and open the command palette using `Ctrl + Shift + P`. Search for "select default profile", select Git Bash, and then open a new terminal using `Ctrl + backtick`. The new terminal should be a bash terminal that looks similar to the following.
+Run the installer with default settings, then go back to VS Code and open the command palette using `Ctrl + Shift + P`. Search for "select default profile", select Git Bash, and then open a new terminal using ``Ctrl + ` ``. The new terminal should be a bash terminal that looks similar to the following.
 
 ![bashscreen](https://user-images.githubusercontent.com/122492228/212781290-77c11689-9371-467c-ab3e-ebc3d7af6873.png)
 
