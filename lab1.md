@@ -46,5 +46,13 @@ When you are successfully logged into the remote server, the terminal should loo
 
 
 ## Step 3: Using Terminal Commands
-One command you can use is ...
+
+Now you can test out some basic Unix commands on the remote computer. 
+
+- `ls` will **list** the files in the current directory
+- `pwd` will **print** the current **working directory**
+- `cd` plus `..` or the name of a directory will change the **current directory**
+- `mkdir` will **make** a new directory
+- `cp` will **copy** a file
+- `exit` will **exit** your connection to the remote server
 
