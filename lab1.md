@@ -54,6 +54,7 @@ Now you can test out some basic Unix commands on the remote computer.
 - `cd` plus `..` or the name of a directory will **change** the current **directory**
 - `mkdir` will **make** a new directory
 - `cp` will **copy** a file
+- `rm` will **remove** a file
 - `exit` will **exit** your connection to the remote server
 
 ![commands](https://user-images.githubusercontent.com/122492228/212788370-e728b6ef-c97c-41c3-89b7-6f4456f2a2a0.png)
