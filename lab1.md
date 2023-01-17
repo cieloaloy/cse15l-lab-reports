@@ -32,11 +32,11 @@ Run the installer with default settings, then go back to VS Code and open the co
 
 ## Step 2: Accessing a Remote Server from the Terminal
 
-With the bash terminal open, type the following into your terminal, omitting the `$`.
+With the bash terminal open, type the following into your terminal, omitting the `$`. Replace `xyz` with the unique characters pertaining to your user account.
 
     $ ssh cs15lwi23xyz@ieng6.ucsd.edu
 
-Replace `xyz` with the unique characters pertaining to your user account. As this is your first time accessing the remote server, it will ask if you wish to continue connecting. Type `yes` and it will return a prompt for your password. Type in your account's password and hit enter/return. 
+As this is your first time accessing the remote server, it will ask if you wish to continue connecting. Type `yes` and it will return a prompt for your password. Type in your account's password and hit enter/return. 
 
 When you are successfully logged into the remote server, the terminal should look like this.
 
@@ -56,3 +56,10 @@ Now you can test out some basic Unix commands on the remote computer.
 - `cp` will **copy** a file
 - `exit` will **exit** your connection to the remote server
 
+![commands](https://user-images.githubusercontent.com/122492228/212788370-e728b6ef-c97c-41c3-89b7-6f4456f2a2a0.png)
+
+In the example above, we used `mkdir` to make a new directory called `hello`. Then, we moved into that directory using `cd`. Using `ls` while in `hello` yielded nothing as the directory was just created. 
+
+Later, after using `cd ..` to get back to the original directory, adding `-lat` as a modifier to `ls` let us see hidden files and their timestamps. Lastly, we used `rm` to remove the text file we copied earlier.
+
+When you are done testing out commands and combinations, use `exit` to disconnect from the server.
