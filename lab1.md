@@ -2,19 +2,19 @@
 
 This tutorial contains instructions on how to download VScode, access a remote server, and test some commands on the remote server.
 
+
+
 ## Step 1: VS Code Download
 
-To begin, visit the download link to download and install the current release.
+To begin, visit the download link to download and install the current release. Click the correct installer for your OS and follow the installer's instructions.
 
 [Visual Studio Code](https://code.visualstudio.com/Download)
 
-Click the correct installer for your OS and follow the installer's instructions.
-
-![vscode](https://user-images.githubusercontent.com/122492228/212778627-0cde0093-37f4-43e8-8c4a-2fb94720c97d.png)
+Opening a new window should look similar to this.
 
 ![vscodescreen](https://user-images.githubusercontent.com/122492228/212778791-fe5bbeba-35cc-4bcf-9c88-68f7e6aaaa01.png)
 
-Opening a new window should look similar to this.
+
 
 
 ## Step 1.5: Downloading Git
@@ -28,6 +28,8 @@ Run the installer with default settings, then go back to VS Code and open the co
 ![bashscreen](https://user-images.githubusercontent.com/122492228/212781290-77c11689-9371-467c-ab3e-ebc3d7af6873.png)
 
 
+
+
 ## Step 2: Accessing a Remote Server from the Terminal
 
 With the bash terminal open, type the following into your terminal, omitting the `$`.
@@ -39,6 +41,8 @@ Replace `xyz` with the unique characters pertaining to your user account. As thi
 When you are successfully logged into the remote server, the terminal should look like this.
 
 ![remotelogin](https://user-images.githubusercontent.com/122492228/212782277-553eed8e-c324-4c71-addd-70696288e982.png)
+
+
 
 
 ## Step 3: Using Terminal Commands
