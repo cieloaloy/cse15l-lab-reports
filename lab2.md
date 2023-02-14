@@ -69,10 +69,6 @@ Using the code above, we can use the `/add-message` path as follows.
 In Lab 3, we investigated and tested a LinkedList implementation, among other things. However, the code was incredibly buggy. To rectify this, we tested the code using JUnit. The following append method works, but not all of the time.
 
 ```
-/**
- * Adds the value to the _end_ of the list
- * @param value
- */
 public void append(int value) {
     if(this.root == null) {
         this.root = new Node(value, null);
@@ -113,27 +109,27 @@ public void twoNumTest() {
     assertEquals("4 1 ", list1.toString());
 }
 ```
-Why did the first test fail? Upon reaching the third call to append, the program continued indefinitely due to the while loop infinitely checking a non-null `n.next`. Because the second test only appends twice, it never reached this infinite state.
+Why did the first test fail? Upon reaching the third call to append, the program continued indefinitely due to the while loop infinitely checking a non-null `n.next`. Because the second test only appended twice, it never reached this infinite state.
 
 ![output](https://user-images.githubusercontent.com/122492228/218622205-1c5eff2a-f0f8-4025-b444-c7992d95a27b.png)
 
-As the terminal output shows, the first test encountered a Memory error, due to the faulty method continuously creating new Nodes without stopping. In order to prevent this, we had to edit the append method's third case, which would handle every attempt at appending other than the very first or second. In the original code,
+As the terminal output shows, the first test encountered an OutOfMemoryError, due to the faulty method continuously creating new Nodes without stopping. In order to prevent this, we had to edit the append method's third case, which would handle every attempt at appending other than the very first or second. In the original code,
 ```
-// Otherwise, loop until the end and add at the end with a null
-    while(n.next != null) {
-        n = n.next;
-        n.next = new Node(value, null);
-    }
+while(n.next != null) {
+    n = n.next;
+    n.next = new Node(value, null);
+}
 ```
 should be changed to...
 ```
-// Otherwise, loop until the end and add at the end with a null
-    while(n.next != null) {
-        n = n.next;
-    }
-    n.next = new Node(value, null);
+while(n.next != null) {
+    n = n.next;
+}
+n.next = new Node(value, null);
 ```
-There we go! This new implementation passes both tests and correctly appends an item to the LinkedList. Taking the creation of `n.next` outside of the loop allows the loop to accurately traverse to the end of the list without stalling the program.
+There we go! This new implementation passed both tests and correctly appended an item to the LinkedList. Taking the creation of `n.next` outside of the loop allowed the loop to accurately traverse to the end of the list without stalling the program.
 
 
 ## Part 3: Summary of Knowledge
+
+Lab 3 greatly assisted in my understanding of running JUnit tests from the command-line instead of the built-in way using VS Code. It is really helpful and clear to see a list of the failed tests and which lines caused errors without additional bits and bobs strewn on, like it would show when using the IDE's debugger.
