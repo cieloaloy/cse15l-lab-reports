@@ -110,15 +110,30 @@ public void twoNumTest() {
     LinkedList list1 = new LinkedList();
     list1.append(4);
     list1.append(1);
-    list1.append(3);
-    assertEquals("4 1 3 ", list1.toString());
+    assertEquals("4 1 ", list1.toString());
 }
 ```
 Why did the first test fail? Upon reaching the third call to append, the program continued indefinitely due to the while loop infinitely checking a non-null `n.next`. Because the second test only appends twice, it never reached this infinite state.
+
 ![output](https://user-images.githubusercontent.com/122492228/218622205-1c5eff2a-f0f8-4025-b444-c7992d95a27b.png)
-As the terminal output shows, the first test encountered a Memory error, due to the faulty method continuously creating new Nodes without stopping.
 
-
+As the terminal output shows, the first test encountered a Memory error, due to the faulty method continuously creating new Nodes without stopping. In order to prevent this, we had to edit the append method's third case, which would handle every attempt at appending other than the very first or second. In the original code,
+```
+// Otherwise, loop until the end and add at the end with a null
+    while(n.next != null) {
+        n = n.next;
+        n.next = new Node(value, null);
+    }
+```
+should be changed to...
+```
+// Otherwise, loop until the end and add at the end with a null
+    while(n.next != null) {
+        n = n.next;
+    }
+    n.next = new Node(value, null);
+```
+There we go! This new implementation passes both tests and correctly appends an item to the LinkedList. Taking the creation of `n.next` outside of the loop allows the loop to accurately traverse to the end of the list without stalling the program.
 
 
 ## Part 3: Summary of Knowledge
