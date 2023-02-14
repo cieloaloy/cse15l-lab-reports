@@ -19,8 +19,6 @@ import java.io.IOException;
 import java.net.URI;
 
 class Handler implements URLHandler {
-    // The one bit of state on the server: a number that will be manipulated by
-    // various requests.
     String running = "";
 
     public String handleRequest(URI url) {
@@ -54,16 +52,71 @@ class StringServer {
 
 Using the code above, we can use the `/add-message` path as follows.
 
-(image)
+![apples](https://user-images.githubusercontent.com/122492228/218616855-4bd7f820-6a41-4c6e-b07e-6bf2b5cd1299.png)
+    Which methods in your code are called?
+    What are the relevant arguments to those methods, and the values of any relevant fields of the class?
+    How do the values of any relevant fields of the class change from this specific request? If no values got changed, explain why.
 
-(image)
-
+![blueberries](https://user-images.githubusercontent.com/122492228/218616881-93b0e219-2520-4bb0-b909-edd5eb87f7ac.png)
+    Which methods in your code are called?
+    What are the relevant arguments to those methods, and the values of any relevant fields of the class?
+    How do the values of any relevant fields of the class change from this specific request? If no values got changed, explain why.
 
 
 
 ## Part 2: Addressing Bugs
 
+In Lab 3, we investigated and tested a LinkedList implementation, among other things. However, the code was incredibly buggy. To rectify this, we tested the code using JUnit. The following append method works, but not all of the time.
 
+```
+/**
+ * Adds the value to the _end_ of the list
+ * @param value
+ */
+public void append(int value) {
+    if(this.root == null) {
+        this.root = new Node(value, null);
+        return;
+    }
+    // If it's just one element, add if after that one
+    Node n = this.root;
+    if(n.next == null) {
+        n.next = new Node(value, null);
+        return;
+    }
+    // Otherwise, loop until the end and add at the end with a null
+    while(n.next != null) {
+        n = n.next;
+        n.next = new Node(value, null);
+    }
+}
+```
+
+The following test produced a failing output.
+```
+@Test
+public void threeNumTest() {
+    LinkedList list1 = new LinkedList();
+    list1.append(4);
+    list1.append(1);
+    list1.append(3);
+    assertEquals("4 1 3 ", list1.toString());
+}
+```
+However, this next test passed!
+```
+@Test
+public void twoNumTest() {
+    LinkedList list1 = new LinkedList();
+    list1.append(4);
+    list1.append(1);
+    list1.append(3);
+    assertEquals("4 1 3 ", list1.toString());
+}
+```
+Why did the first test fail? Upon reaching the third call to append, the program continued indefinitely due to the while loop infinitely checking a non-null `n.next`. Because the second test only appends twice, it never reached this infinite state.
+![output](https://user-images.githubusercontent.com/122492228/218622205-1c5eff2a-f0f8-4025-b444-c7992d95a27b.png)
+As the terminal output shows, the first test encountered a Memory error, due to the faulty method continuously creating new Nodes without stopping.
 
 
 
