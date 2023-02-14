@@ -17,7 +17,11 @@ This option displays line numbers next to the text! This is especially helpful w
 3
 4
 5 A Brief History
-6 The first wave of California immigrants arrived somewhere between 20,000 and 35,000 years ago<C2><A0><E2><80><94><C2><A0>wandering Asiatic tribes who entered the America      6 n continent via the Bering Strait, which at that time was dry land, or perhaps covered in ice. In the succeeding centuries, their descendants continued to push south and      6  east, and eventually spread out to people the whole of the continent from Alaska to Patagonia. The tribes who decided to settle in what is now California were fortunate      6  in their choice of homeland. The climate was very pleasant, and food was sufficiently plentiful for them to avoid the constant warfare that plagued many tribes elsewher      6 e in the Americas.
+6 The first wave of California immigrants arrived somewhere between 20,000 and 35,000 years ago<C2><A0><E2><80><94><C2><A0>wandering Asiatic tribes who entered the America      
+6 n continent via the Bering Strait, which at that time was dry land, or perhaps covered in ice. In the succeeding centuries, their descendants continued to push south and      
+6  east, and eventually spread out to people the whole of the continent from Alaska to Patagonia. The tribes who decided to settle in what is now California were fortunate      
+6  in their choice of homeland. The climate was very pleasant, and food was sufficiently plentiful for them to avoid the constant warfare that plagued many tribes elsewher      
+6 e in the Americas.
 ```
 
 As shown, the option displays the numbers of the lines alongside the text of the document. The repeating numbers signify a line longer than is able to be displayed. Let's see it on a different file.
@@ -31,8 +35,12 @@ As shown, the option displays the numbers of the lines alongside the text of the
 4
 5 What to Do
 6 Shopping
-7 Barcelona is at least Madrid<E2><80><99>s equal as a shopping capital. As a city of eminent style and taste, Barcelona abounds in fashion boutiques, antiques shops, and       7 art galleries. Design is taken very seriously here.
-8 Shopping is also extremely pleasant in Barcelona, as the city hasn<E2><80><99>t yet been overtaken by large look-alike malls and homogenous American or Euro stores. Cata      8 lonia still thrives on family-owned shops, and window shopping along the Rambla de Catalunya or Passeig de Gr<C3><A0>cia is a delight. Remember that with the exception o      8 f the big department stores, most shops are closed between 1:30 or 2pm and 4 or 5pm, and stay open until 8pm or later. Many smaller stores also close Saturday afternoons      8  and Sundays.
+7 Barcelona is at least Madrid<E2><80><99>s equal as a shopping capital. As a city of eminent style and taste, Barcelona abounds in fashion boutiques, antiques shops, and       
+7 art galleries. Design is taken very seriously here.
+8 Shopping is also extremely pleasant in Barcelona, as the city hasn<E2><80><99>t yet been overtaken by large look-alike malls and homogenous American or Euro stores. Cata      
+8 lonia still thrives on family-owned shops, and window shopping along the Rambla de Catalunya or Passeig de Gr<C3><A0>cia is a delight. Remember that with the exception o      
+8 f the big department stores, most shops are closed between 1:30 or 2pm and 4 or 5pm, and stay open until 8pm or later. Many smaller stores also close Saturday afternoons      
+8  and Sundays.
 ```
 
 These are just the first few lines of the document. The output is very similar to the above example, but with new text for the different document.
@@ -93,16 +101,16 @@ Just for fun, let's combine all three so far.
 ```
 [cs15lwi23acc@ieng6-201]:Abernathy:307$ less -S -N -X ch6.txt 
  
-      1
-      2
-      3
-      4
-      5 William Dillard<E2><80><99>s simple maxim1 succinctly captures the central<E2><80><94>and perennial<E2><80><94>inventory challenge facing retail managers. To make a sale, a retaile
-      6 The main goal of retail inventory strategy is to maximize profitability by managing the inherent tension between stocking too much and stocking too little. Retail buyers of old gra
-      7 Conceptually, retail inventory management is straightforward enough: Forecast demand for a product; order the product in the appropriate quantity; stock it in the right retail loca
-      8 The forecasting and inventory models presented in this chapter are not new; they have been recommended for years by statisticians and operations researchers.3 However, until the 19
-      9 The Retail Forecasting Challenge
-     10 We first turn to the problem of forecasting sales in retail stores. Imagine trying to predict how many women will walk into a particular downtown Boston store next week prepared to  
+1
+2
+3
+4
+5 William Dillard<E2><80><99>s simple maxim1 succinctly captures the central<E2><80><94>and perennial<E2><80><94>inventory challenge facing retail managers. To make a sale, a retaile
+6 The main goal of retail inventory strategy is to maximize profitability by managing the inherent tension between stocking too much and stocking too little. Retail buyers of old gra
+7 Conceptually, retail inventory management is straightforward enough: Forecast demand for a product; order the product in the appropriate quantity; stock it in the right retail loca
+8 The forecasting and inventory models presented in this chapter are not new; they have been recommended for years by statisticians and operations researchers.3 However, until the 19
+9 The Retail Forecasting Challenge
+10 We first turn to the problem of forecasting sales in retail stores. Imagine trying to predict how many women will walk into a particular downtown Boston store next week prepared to  
 ```
 
 The output looks exactly like our previous command using just `-S -N`, but this one will remain in the terminal. 
@@ -112,7 +120,7 @@ Overall, the significant difference between `-X` and `cat file.txt` is that this
 
 ## Option 4: -F
 
-This option will quit the `less` display if the text is shorter than a screen length.
+I found this one indirectly through the Wikipedia link, as I found the `-?` help option there and used it to find this one. This option will quit the `less` display if the text is shorter than a screen length.
 
 ```
 [cs15lwi23acc@ieng6-201]:Abernathy:310$ less -F ch1.txt
