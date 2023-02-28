@@ -43,7 +43,7 @@ As shown, the option displays the numbers of the lines alongside the text of the
 8  and Sundays.
 ```
 
-These are just the first few lines of the document. The output is very similar to the above example, but with new text for the different document.
+These are just the first few lines of the document. The output is very similar to the above example, but with new text for the different document. Overall, this option is helpful for viewing longer documents, such as code where tracking edits and additions requires attention to detail. It is also generally helpful to keep your place while viewing the file.
 
 
 ## Option 2: -S
@@ -79,7 +79,7 @@ Let's try combining the two options we just learned!
 9 This chapter will examine the differences between the traditional re-tail model and lean retailing. We explore how the set of practices that traditional retailers drew on to mercha
 ```
 
-As expected, the text does not wrap, and is also accompanied by line numbers.
+As expected, the text does not wrap, and is also accompanied by line numbers. This option is helpful for documents where visual formatting is important, like written text or classpaths. However, this option would likely make it more difficult to screenshot or copy the output, because as seen above, the terminal cuts off text at the edge of the screen.
 
 
 ## Option 3: -X
@@ -115,7 +115,7 @@ Just for fun, let's combine all three so far.
 
 The output looks exactly like our previous command using just `-S -N`, but this one will remain in the terminal. 
 
-Overall, the significant difference between `-X` and `cat file.txt` is that this option adheres to the regular rules of `less` by only displaying one screen's worth of information at a time. The text that remains is ONLY that which was shown with the command, NOT the entire document.
+Overall, the significant difference between `-X` and `cat file.txt` is that this option adheres to the regular rules of `less` by only displaying one screen's worth of information at a time. The text that remains is ONLY that which was shown with the command, NOT the entire document. This option is helpful for when you only need to access the beginning or a specific section of a particularly long file.
 
 
 ## Option 4: -F
@@ -138,5 +138,5 @@ Attempting to use this option on a regular-length file will just behave normally
 Hello there
 ```
 
-Instead of showing the usual screen-length display, the message was printed to the terminal and `less` was immediately quit. With shorter text files such as the above, this option seems to be functionally similar to `cat`.
+Instead of showing the usual screen-length display, the message was printed to the terminal and `less` was immediately quit. With shorter text files such as the above, this option seems to be functionally similar to `cat`. `less -F` is helpful because it instantly tells you whether or not a file's content is short enough to fit on one screen length, whereas using `cat` without knowing the file's contents might accidentally lead to a huge log of text.
 
