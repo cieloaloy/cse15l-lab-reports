@@ -2,7 +2,7 @@
 
 This tutorial explains 4 command-line options for the command `less`. We use `less` to view a portion of a file from the command-line without printing the entire text, hence the name LESS.
 
-All of the following options were found using the Wikipedia page for `less`: https://en.wikipedia.org/wiki/Less_(Unix)
+All of the following options were found using the Wikipedia page for [less](https://en.wikipedia.org/wiki/Less_(Unix)).
 
 
 ## Option 1: -N
