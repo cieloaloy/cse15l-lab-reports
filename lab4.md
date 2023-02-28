@@ -12,7 +12,7 @@ Before starting the activity, make sure you have a fork of the repository on you
 
 ## Step 1: Log into ieng6
 
-To log into the ieng6 machine remotely I typed `ssh cs15lwi23acc@ieng6.ucsd.edu <Enter>`
+To log into the ieng6 machine remotely I typed `ssh cs15lwi23acc@ieng6.ucsd.edu <Enter>` into the terminal.
 
 ![Screenshot_20230226_073628](https://user-images.githubusercontent.com/122492228/221473541-88a76a36-87c3-4012-b605-39ba34133417.png)
 
@@ -23,8 +23,8 @@ You may want to copy and paste the account name if you find that it is faster or
 
 ![Screenshot_20230226_073526](https://user-images.githubusercontent.com/122492228/221473766-9f6d30ec-f21c-40f7-99fb-c8707fb08c8b.png)
 
-I navigated back to the repo page and pressed the copy button next to the SSH link in order to copy it to my clipboard.
-Then, I typed `git clone <Ctrl>V <Enter>`to clone the link that I pasted in.
+I navigated back to the repo page and pressed the copy button (the two layered squares) next to the SSH link in order to copy it to my clipboard.
+Then, back in the terminal, I typed `git clone <Ctrl>V <Enter>`to clone the link that I pasted in.
 
 ![Screenshot_20230226_073726](https://user-images.githubusercontent.com/122492228/221473974-af6b7c31-4430-4f4c-b77a-885f98d54243.png)
 
@@ -53,13 +53,15 @@ To save the file, I pressed `<Ctrl>O <Enter>` and then exited the editor with `<
 
 ## Step 5: Run the JUnit tests again
 
-Since I already ran the two commands to compile and run the files earlier, I typed `<Ctrl>R javac <Enter>` to compile the files. Then I used `<Ctrl>R java <Enter>` to run the tester file. This time, it passes both tests.
+Since I already ran the two commands to compile and run the files earlier, I typed `<Ctrl>R javac <Enter>` to find the command to compile the files. Then I used `<Ctrl>R java <Space><Enter>` to find the command to run the tester file. Adding the space during the second command helps the computer differentiate between `java` and `javac`.
 
 ![Screenshot_20230226_080905](https://user-images.githubusercontent.com/122492228/221475547-a2277181-5bce-498d-938c-ea76fdf3f4dc.png)
 
+This time, it passes both tests.
+
 ## Step 6: Commit and push changes
 
-To commit I typed `git commit -am "edited ListExamples" <Enter>` to commit the changes with a descriptive message.
+To commit I typed `git commit -am "edited ListExamples" <Enter>` to add the newly edited file and commit the changes with a descriptive message.
 
 ![Screenshot_20230226_081701](https://user-images.githubusercontent.com/122492228/221475637-512aa70f-6c01-4483-8f84-04d75042c1dd.png)
 
