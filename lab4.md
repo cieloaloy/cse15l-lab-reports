@@ -2,9 +2,6 @@
 
 This tutorial contains instructions on how to clone a repo, edit a file, and commit/push changes all from the command line.
 
-
-## Setup
-
 Before starting the activity, make sure you have a fork of the repository on your Github account.
 
 [Lab 7 Repo](https://github.com/ucsd-cse15l-w23/lab7.git)
