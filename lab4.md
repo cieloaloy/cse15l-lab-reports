@@ -44,8 +44,11 @@ I went back to the terminal and typed `<Ctrl>V ListExamplesTests <Enter>` to pas
 
 ## Step 4: Edit the file, fixing the bug
 
-I typed `nano ListExamples <Enter>` to open the bugged file in the nano editor. (ADD MORE)
+I typed `nano ListExamples <Enter>` to open the bugged file in the nano editor. After entering the nano editor, I held down `<down>` for 42 lines and held down `<right>` to navigate to the right by 12 characters. I used `<backspace>` to turn the "1" into a "2" in order to fix the bug.
+
 ![Screenshot_20230226_080719](https://user-images.githubusercontent.com/122492228/221474561-5f52ccce-0a61-4108-b709-e5457ffa2774.png)
+
+To save the file, I pressed `<Ctrl>O <Enter>` and then exited the editor with `<Ctrl>X`.
 
 
 ## Step 5: Run the JUnit tests again
