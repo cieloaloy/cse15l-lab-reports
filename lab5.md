@@ -23,7 +23,7 @@ I copied the grading script over to my local directory containing my CSE 12 prog
 
 ![Screenshot 2023-03-13 223311](https://user-images.githubusercontent.com/122492228/224905647-cc1fc669-d6e9-4c36-93d7-ac8b244c8f91.png)
 
-Here is the altered grading script using a PA7 public tester, which passed all the tests.
+Above is the altered grading script using a PA7 public tester, which passed all the tests.
 
 ![Screenshot 2023-03-13 224101](https://user-images.githubusercontent.com/122492228/224906766-2a2db962-5743-4552-b4cd-5144bcdcfa70.png)
 
